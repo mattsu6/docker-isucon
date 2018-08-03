@@ -7,7 +7,7 @@ RUN \
   yum -y install git mysql sudo && \
   useradd -G wheel isucon && \
   echo '%wheel ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers && \
-  git clone -b mattsu https://github.com/mattsu6/isucon4.git && \
+  git clone -b #1 https://github.com/mattsu6/isucon4.git && \
   mkdir /tmp/isucon && \
   rsync -a isucon4/qualifier/sql /tmp/isucon/ && \
   rsync -a isucon4/qualifier/webapp /tmp/isucon/ && \
