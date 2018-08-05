@@ -2,7 +2,7 @@ FROM tosukui/docker-isucon4-webapp-go-cache:1
 # ブランチの更新を見て以下を再ビルドします
 ADD "https://api.github.com/repos/mattsu6/isucon4/git/refs/heads/master" version.json
 RUN  \
-  git clone -b mattsu https://github.com/mattsu6/isucon4.git && \
+  git clone -b master https://github.com/mattsu6/isucon4.git && \
   mkdir /tmp/isucon && \
   rsync -a isucon4/qualifier/sql /tmp/isucon/ && \
   rsync -a isucon4/qualifier/webapp /tmp/isucon/ && \
