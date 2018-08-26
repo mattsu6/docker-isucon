@@ -30,4 +30,4 @@ RUN \
   mv /tmp/benchmarker/benchmarker /home/isucon/ && \
   rm -rf /tmp/benchmarker isucon4
 
-CMD ["sudo", "-u", "isucon", "-i", "./benchmarker", "bench", "--host", "nginx"]
+CMD ["sudo", "-u", "isucon", "-i", "./benchmarker", "bench", "--host", "35.221.81.247"]
