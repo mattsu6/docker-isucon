@@ -20,7 +20,7 @@ $ sh ./app.sh stop go
 
 ### ベンチ
 ```
-$ sh ./bench.sh <lang>
+$ sh ./bench.sh <lang> <target ip>
 ```
 ### webapp取得先ブランチ変更(go オンリー)
 * Dockerfile20行目の

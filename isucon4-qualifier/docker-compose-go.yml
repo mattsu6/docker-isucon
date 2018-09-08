@@ -1,9 +1,9 @@
 version: '3'
 services:
   bench:
-    image: matsuu/isucon4-qualifier-bench:latest
+    build:
+      context: bench
     links:
-      - nginx
       - mysql
   nginx:
     build: nginx
