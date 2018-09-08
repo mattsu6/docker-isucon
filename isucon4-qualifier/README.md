@@ -6,10 +6,11 @@ ISUCON4予選のDockerfile
 ## usage(docker-compose)
 ### 起動
 ```
-$ sh ./app.sh start <lang> 
+$ ./app.sh start <lang> 
 # if you wanna start go webapp
-$ sh ./app.sh start go 
+$ ./app.sh start go master
 ```
+
 ### 停止
 ```
 $ sh ./app.sh stop <lang> 
