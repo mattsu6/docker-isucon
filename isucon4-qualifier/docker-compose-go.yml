@@ -18,7 +18,8 @@ services:
       args:
         - build_branch
     links:
-       - mysql
+      - mysql
+      - redis
     ports:
       - "8080"
       - "6060"
@@ -34,3 +35,7 @@ services:
     command: ["--max_allowed_packet=300M"]
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+  redis:
+    build: redis
+    ports:
+    - "6379"
