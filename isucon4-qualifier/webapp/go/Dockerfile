@@ -5,6 +5,7 @@ ADD "https://api.github.com/repos/mattsu6/isucon4/git/refs/heads/$build_branch" 
 RUN  \
   git clone -b $build_branch https://github.com/mattsu6/isucon4.git && \
   mkdir /tmp/isucon && \
+  rsync -a isucon4/qualifier/redis /tmp/isucon/ && \
   rsync -a isucon4/qualifier/sql /tmp/isucon/ && \
   rsync -a isucon4/qualifier/webapp /tmp/isucon/ && \
   sed -e 's/127\.0\.0\.1/mysql/' isucon4/qualifier/init.sh > /tmp/isucon/init.sh && \
