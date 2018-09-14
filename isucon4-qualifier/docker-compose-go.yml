@@ -3,10 +3,10 @@ services:
   bench:
     build:
       context: bench
+      args:
+        - target_branch
     links:
       - mysql
-    args:
-      - target_branch
   nginx:
     build: nginx
     links:
