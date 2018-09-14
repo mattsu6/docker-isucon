@@ -2,11 +2,13 @@ FROM centos:6
 
 MAINTAINER matsuu@gmail.com
 
+ARG target_branch=master
+
 RUN \
   yum -y update && \
   yum -y install gcc git libxml2-devel mysql rubygems sudo && \
   useradd -G wheel isucon && \
-  git clone https://github.com/isucon/isucon4.git && \
+  git clone -b $target_branch https://github.com/isucon/isucon4.git && \
   curl -L http://golang.org/dl/go1.3.linux-amd64.tar.gz | tar zxf - -C /usr/local && \
   rsync -a isucon4/qualifier/sql /home/isucon/ && \
   sed -e 's/127\.0\.0\.1/mysql/' isucon4/qualifier/init.sh > /home/isucon/init.sh && \

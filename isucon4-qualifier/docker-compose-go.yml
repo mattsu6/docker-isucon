@@ -5,6 +5,8 @@ services:
       context: bench
     links:
       - mysql
+    args:
+      - target_branch
   nginx:
     build: nginx
     links:
