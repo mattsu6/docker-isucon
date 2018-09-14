@@ -28,6 +28,8 @@ services:
       ISU4_DB_PASSWORD: isucon
       ISU4_DB_HOST: mysql
       ISU4_DB_PORT: 3306
+      ISU4_REDIS_HOST: redis
+      ISU4_REDIS_PORT: 6379
   mysql:
     image: mysql:5.5
     ports:
@@ -38,4 +40,4 @@ services:
   redis:
     build: redis
     ports:
-    - "6379"
+      - "6379"
